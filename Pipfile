@@ -7,8 +7,6 @@ verify_ssl = true
 
 [packages]
 bs4 = "*"
-transformers = "*"
-torch = "*"
 sentence-transformers = "*"
 fastapi = "*"
 uvicorn = "*"

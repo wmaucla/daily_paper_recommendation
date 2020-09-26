@@ -8,6 +8,11 @@ I normally sort arxiv by new and select papers of interest to read every day. I'
 2. Launch via `uvicorn main:app`
 3. View the code for how to make a call to (local api) in `sample_response.py`
 
+## Pushing changes to heroku
+1. `heroku create` - first time only
+2. `git push heroku HEAD:master` to push changes + build app
+
+
 Currently, the process involves:
 
 1. Hitting the ARXIV API for the most recent papers (will be designed to run each day)
