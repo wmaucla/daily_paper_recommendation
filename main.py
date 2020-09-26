@@ -20,7 +20,9 @@ def main():
     titles_list = soup.find_all("title")
     dates_list = soup.find_all("updated")
 
-    with open("favorited_papers.txt") as f:  # needs to be updated to work with Mendeley API
+    with open(
+        "favorited_papers.txt"
+    ) as f:  # needs to be updated to work with Mendeley API
         sample_topics = f.readlines()
 
     """
@@ -34,7 +36,6 @@ def main():
     sentence_embeddings = model.encode(
         sample_topics, convert_to_tensor=True
     )  # embed the previous papers list
-
 
     prospective_papers = []
     for title_date, title in zip(dates_list, titles_list):
@@ -52,15 +53,12 @@ def main():
 
     return prospective_papers
 
+
 @app.get("/")
 async def root():
     return {"Hello!": "Navigate to /get_names"}
 
+
 @app.get("/get_names")
 async def return_names():
     return main()
-
-
-
-
-    
