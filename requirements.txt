@@ -28,6 +28,7 @@ soupsieve==2.0.1
 starlette==0.13.6
 threadpoolctl==2.1.0
 tokenizers==0.8.1rc2
+--find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.6.0+cpu
 torchvision==0.7.0+cpu
 tqdm==4.49.0
